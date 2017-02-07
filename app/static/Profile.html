@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block css %}
+  <style type="text/css">
+      .picalign{
+          display: relative;
+          border: solid 2px gray;
+          bottom:100px;
+      }
+      
+      .info{
+          display: inline-block;
+          border: solid 1px gray;
+          width: 500px;
+          
+      }
+      .nameback{
+          background-color: gray;
+      }
+      
+  </style>
+
+{% end block %}
+
+{% block main %}
+    <div>
+        <h2>Profile</h2>
+    </div>
+        <div class="picalign">
+            <img src="{{url_for('static',filename="RickSanchez.jpg")}}">
+            
+        </div>
+        <div class="nameback">
+            <label>Rick Sanchez </label><br>
+        </div>
+        <div class="info">
+            <p>Todays date is {{today}} </p><br>
+            <p><strong>Username:</strong> username101</p><br>
+            <p><strong>ID Number:</strong>69691234</p><br>
+            <p><strong>Age:</strong> 20</p><br>
+            <p><strong>Gender: Male</strong></p><br><br>
+            <p>I am awesome.</p>
+        </div>
+{% end block %}
